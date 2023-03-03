@@ -25,9 +25,9 @@ operators.forEach((operator) => {
         } else {
             input.innerHTML += event.target.innerHTML;
         }
-
     })
 })
+
 
 numbers.forEach((number) => {
     number.addEventListener('click', (event) => {
@@ -36,10 +36,7 @@ numbers.forEach((number) => {
 
         if (isResultDisplayed === false) {
             input.innerHTML += event.target.innerHTML;
-        } else if (
-            isResultDisplayed === true
-            && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷" || lastChar === "."
-        ) {
+        } else if (isResultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷" || lastChar === ".") {
             input.innerHTML += event.target.innerHTML;
             isResultDisplayed = false
         } else {
@@ -54,7 +51,6 @@ clear.addEventListener('click', () => {
     input.innerHTML = '';
 })
 
-
 result.addEventListener('click', () => {
     const inputValue = input.innerHTML;
     const lastChar = inputValue[inputValue.length - 1];
@@ -64,8 +60,8 @@ result.addEventListener('click', () => {
     }
 
     const onlyNumbers = inputValue.split(/\+|\-|\÷|\×/g);
-    const onlyOperators = inputValue.replace(/[0-9]\./g, '').split('');
 
+    const onlyOperators = inputValue.replace(/[0-9]\./g, '').split('');
 
     let dividerIndex = onlyOperators.indexOf('÷');
     while (dividerIndex !== -1) {
@@ -95,13 +91,8 @@ result.addEventListener('click', () => {
         addIndex = onlyOperators.indexOf('+');
     }
 
-
-
-
-
-
-
     input.innerHTML = onlyNumbers.innerHTML[0]
     isResultDisplayed = true
+
 })
 
