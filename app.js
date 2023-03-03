@@ -61,7 +61,7 @@ result.addEventListener('click', () => {
 
     const onlyNumbers = inputValue.split(/\+|\-|\÷|\×/g);
 
-    const onlyOperators = inputValue.replace(/[0-9]\./g, '').split('');
+    const onlyOperators = inputValue.replace(/[0-9]|\./g, '').split('');
 
     let dividerIndex = onlyOperators.indexOf('÷');
     while (dividerIndex !== -1) {
@@ -91,7 +91,7 @@ result.addEventListener('click', () => {
         addIndex = onlyOperators.indexOf('+');
     }
 
-    input.innerHTML = onlyNumbers.innerHTML[0]
+    input.innerHTML = onlyNumbers[0]
     isResultDisplayed = true
 
 })
