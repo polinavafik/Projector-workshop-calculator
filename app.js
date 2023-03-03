@@ -4,7 +4,7 @@ const input = document.querySelector('.input');
 const numbers = document.querySelectorAll('.number');
 const result = document.querySelector('.result');
 const clear = document.querySelector('.clear');
-const operators = document.querySelectorAll('.operator')
+const operators = document.querySelectorAll('.operator');
 
 let isResultDisplayed = false;
 
@@ -16,7 +16,7 @@ operators.forEach((operator) => {
         const lastChar = inputValue[inputValue.length - 1];
 
         if (inputValue.length === 0) {
-            return null
+            return null;
         } else if (
             lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷" || lastChar === "."
         ) {
