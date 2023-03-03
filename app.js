@@ -4,7 +4,7 @@ const input = document.querySelector('.input');
 const numbers = document.querySelectorAll('.number');
 const result = document.querySelector('.result');
 const clear = document.querySelector('.clear');
-const operators = document.querySelector('.operator')
+const operators = document.querySelectorAll('.operator')
 
 let isResultDisplayed = false;
 
